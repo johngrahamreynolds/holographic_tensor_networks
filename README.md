@@ -1,6 +1,6 @@
 # Computational Holography: Tensor Networks, RG Flow, and Emergent Geometry
 
-This repo is home to my broad study of holographic tensor networks as an effective, phenomenological realization of the gauge/gravity duality conjecture in theoretical physics. The most famous example of this conjecture is the AdS/CFT correspondence, which we target as an initial starting point for computational study. 
+This repo is home to my broad study of holographic tensor networks as an effective, phenomenological realization of the gauge/gravity duality conjecture in theoretical physics. The most famous example of this conjecture is the AdS/CFT correspondence, which we target as an initial starting point for novel computational study. 
 
 
 The aim of this robust repo is to house all resources integral to the full scientific research process. As such, this project contains a variety of different components:
@@ -21,8 +21,36 @@ I can be reached for questions or comments at { johngrahamreynolds [at] utexas [
   <em>Circle Limit IV (1960), M.C. Escher</em>
 </div>
 
-
 ## Abstract
+
+## Setup
+
+### Environment Setup (using Conda)
+
+**Initial setup:**
+```bash
+# Create the conda environment
+conda env create -f environment.yml
+
+# Activate the environment
+conda activate holo_tns
+
+# Install all requirements with exact versions
+pip install -r requirements.txt
+```
+
+**Development workflow:**
+
+As you add packages with `pip install`, update `requirements.txt` to maintain reproducibility:
+
+```bash
+# After installing new packages, export exact versions
+pip freeze > requirements.txt
+```
+
+This captures all installed packages (including transitive dependencies) with exact versions, ensuring full reproducibility for research purposes.
+
+The project uses Python 3.11 for compatibility with modern tensor network libraries. GPU support can be added later by installing appropriate packages for your hardware (CuPy, JAX, Apex, etc.).
 
 ## Overview
 
