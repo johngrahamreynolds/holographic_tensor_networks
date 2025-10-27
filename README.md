@@ -16,7 +16,7 @@ I can be reached for questions or comments at { johngrahamreynolds [at] utexas [
 
 
 <div align="center">
-  <img src="Escher_A_and_D.jpg" alt="Escher A and D" width="600"/>
+  <img src="./pics/Escher_angels_and_devils.jpg" alt="Escher A and D" width="600"/>
   <br>
   <em>Circle Limit IV (1960), M.C. Escher</em>
 </div>
