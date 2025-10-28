@@ -12,7 +12,9 @@ The aim of this robust repo is to house all resources integral to the full scien
 - Generalized ML/Tensor Net Frameworks and Tooling for reuse
 - Documentation, Struggles, Failures, Questions
 
-I can be reached for questions or comments at { johngrahamreynolds [at] utexas [dot] edu } OR { johngrahamreynolds [at] gmail [dot] com }
+I can be reached for questions or comments at:
+
+{ johngrahamreynolds [at] utexas [dot] edu } OR { johngrahamreynolds [at] gmail [dot] com }
 
 
 <div align="center">
