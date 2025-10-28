@@ -2,17 +2,10 @@
 
 Recent work in the mathematical foundations of machine learning has attempted classify many common deep learning architectures according to their underlying network geometry. This field, known as *geometric deep learning*, may prove fruitful to the study of emergent holographic geometry in tensor networks.  
 
-<p align="center">
-  <span>
-    <img src="../pics/Abstract_Composition_LeCorbusier.jpg" alt="Abstract Composition by Le Corbusier" width="220"><br>
-    <sub>Abstract Composition (1927), Le Corbusier (Charles-Édouard Jeanneret)</sub>
-  </span>
-  &nbsp;&nbsp;&nbsp;
-  <span>
-    <img src="../pics/Transformer.png" alt="Transformer" width="220"><br>
-    <sub>Transformer Architecture (2017), Vaswani, et al.</sub>
-  </span>
-</p>
+|  |  |
+|:--:|:--:|
+| <img src="../pics/Abstract_Composition_LeCorbusier.jpg" alt="Abstract Composition by Le Corbusier" width="220"> | <img src="../pics/Transformer.png" alt="Transformer" width="220"> |
+| <sub>Abstract Composition (1927), Le Corbusier (Charles-Édouard Jeanneret)</sub> | <sub>Transformer Architecture (2017), Vaswani, et al.</sub> |
 
 ## Non-Euclidean Optimization
 
