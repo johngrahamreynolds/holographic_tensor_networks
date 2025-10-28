@@ -6,12 +6,12 @@ This repo is home to my broad study of holographic tensor networks. Particularly
 The aim of this robust repo is to house all resources integral to the full scientific research process. As such, this project contains a variety of different components including examples, original research, references, and more:
 
 - [Toy/Foundational Models](./examples/)
-<!-- - Reproduction of Interesting Results from Literature -->
 - [Research: Novel Toy Model Computation/Optimization](./research/)
 - [A List of Relevant References (far from all encompassing)](./references/)
 - Systematic Study/Comparison of Models
 - [Generalized ML/Tensor Net Frameworks and Tooling for reuse](./frameworks/)
 - [Questions Struggles, Failures](./questions.md)
+<!-- - Reproduction of Interesting Results from Literature -->
 
 I can be reached for questions or comments at:
 
