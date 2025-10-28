@@ -1,16 +1,17 @@
 # Computational Holography: Tensor Networks, RG Flow, and Emergent Geometry
 
-This repo is home to my broad study of holographic tensor networks as an effective, phenomenological realization of the gauge/gravity duality conjecture in theoretical physics. The most famous example of this conjecture is the AdS/CFT correspondence, which we target as an initial starting point for novel computational study. 
+This repo is home to my broad study of holographic tensor networks. Particularly, I am interested in tensor networks as an effective, phenomenological realization of the gauge/gravity duality conjecture in theoretical physics. The most famous example of this conjecture is the AdS/CFT correspondence, which I target as an initial starting point for novel computational study. 
 
 
-The aim of this robust repo is to house all resources integral to the full scientific research process. As such, this project contains a variety of different components:
-- Toy/Foundational Models
-- Reproduction of Interesting Results from Literature
-- A List of Relevant References (far from all encompassing)
-- Novel Toy Model Computation, Optimization
+The aim of this robust repo is to house all resources integral to the full scientific research process. As such, this project contains a variety of different components including examples, original research, references, and more:
+
+- [Toy/Foundational Models](./examples/)
+<!-- - Reproduction of Interesting Results from Literature -->
+- [Research: Novel Toy Model Computation/Optimization](./research/)
+- [A List of Relevant References (far from all encompassing)](./references/)
 - Systematic Study/Comparison of Models
-- Generalized ML/Tensor Net Frameworks and Tooling for reuse
-- Documentation, Struggles, Failures, Questions
+- [Generalized ML/Tensor Net Frameworks and Tooling for reuse](./frameworks/)
+- [Questions Struggles, Failures](./questions.md)
 
 I can be reached for questions or comments at:
 
