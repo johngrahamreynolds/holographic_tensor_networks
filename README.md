@@ -4,7 +4,7 @@ This repo is home to my broad study of holographic tensor networks as an effecti
 
 
 The aim of this robust repo is to house all resources integral to the full scientific research process. As such, this project contains a variety of different components:
-- Toy, Foundational Models
+- Toy/Foundational Models
 - Reproduction of Interesting Results from Literature
 - A List of Relevant References (far from all encompassing)
 - Novel Toy Model Computation, Optimization
