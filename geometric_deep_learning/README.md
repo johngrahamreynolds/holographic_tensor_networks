@@ -3,12 +3,12 @@
 Recent work in the mathematical foundations of machine learning has attempted classify many common deep learning architectures according to their underlying network geometry. This field, known as *geometric deep learning*, may prove fruitful to the study of emergent holographic geometry in tensor networks.  
 
 <div style="text-align: center;">
-  <div style="display: inline-block; width: 320px; margin-right: 15px; vertical-align: top;">
-    <img src="../pics/Abstract_Composition_LeCorbusier.jpg" alt="Abstract Composition by Le Corbusier" width="320" style="display: block;">
+  <div style="display: inline-block; width: 260px; margin-right: 15px; vertical-align: top;">
+    <img src="../pics/Abstract_Composition_LeCorbusier.jpg" alt="Abstract Composition by Le Corbusier" width="260" style="display: block;">
     <p style="text-align: center; font-size: 0.9em; margin-top: 5px;">Abstract Composition (1927), Le Corbusier (Charles-Édouard Jeanneret)</p>
   </div>
-  <div style="display: inline-block; width: 320px; vertical-align: top;">
-    <img src="../pics/Transformer.png" alt="Transformer" width="320" style="display: block;">
+  <div style="display: inline-block; width: 260px; vertical-align: top;">
+    <img src="../pics/Transformer.png" alt="Transformer" width="260" style="display: block;">
     <p style="text-align: center; font-size: 0.9em; margin-top: 5px;">Transformer Architecture (2017), Vaswani, et al.</p>
   </div>
 </div>
