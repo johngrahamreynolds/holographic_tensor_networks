@@ -1,6 +1,6 @@
 # Example Tensor Networks
 
-This directory contains a variety of examples implementing various tensor networks. As discussed in [Evenbly and Vidal's review](../references/EvenblyVidal_TensorNetsAndGeometry.pdf), the geometric structure of a tensor network state can be classified as either *physical* or *holographic*. We partition this section of examples accordingly.
+This directory contains a variety of examples implementing various tensor networks. As discussed in [Evenbly and Vidal's review](../references/EvenblyVidal_TensorNetsAndGeometry.pdf), the geometric structure of a tensor network state can be classified as either *physical* or *holographic*. We partition this section accordingly and connect each class to related algorithmic and geometric perspectives elsewhere in the repo.
 
 ## Physical Geometry
 
@@ -23,4 +23,9 @@ Examples of tensor networks with manifest holographic geometry include:
 - [Multiscale Entanglement Renormalization ansatz (MERA)](./mera/)
 
 - [Hyper-invariant Tensor Networks](./hyperinvariant/)
+
+## See Also
+
+- Algorithms as tensor networks: [`quantum_algorithms/`](../quantum_algorithms/)
+- Background literature: [`references/`](../references/)
 

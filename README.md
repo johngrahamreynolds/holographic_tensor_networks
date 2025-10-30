@@ -3,15 +3,22 @@
 This repo is home to my broad study of holographic tensor networks. Particularly, I am interested in tensor networks as an effective, phenomenological realization of the gauge/gravity duality conjecture in theoretical physics. The most famous example of this conjecture is the AdS/CFT correspondence, which I target as an initial starting point for novel computational study. 
 
 
-The aim of this robust repo is to house all resources integral to the full scientific research process. As such, this project contains a variety of different components including examples, original research, references, and more:
+The aim of this robust repo is to house all resources integral to the full scientific research process. Use the navigation below to explore implementations, algorithms, references, and tooling:
 
-- [Toy/Foundational Models](./examples/)
-- [Research: Novel Toy Model Computation/Optimization](./research/)
-- [A List of Relevant References (far from all encompassing)](./references/)
-- Systematic Study/Comparison of Models
-- [Generalized ML/Tensor Net Frameworks and Tooling for reuse](./frameworks/)
-- [Questions Struggles, Failures](./questions.md)
-<!-- - Reproduction of Interesting Results from Literature -->
+- [Tensor Networks: Examples and Geometry](./tensor_networks/)
+  - Physical geometry: [MPS](./tensor_networks/mps/), [PEPS](./tensor_networks/peps/)
+  - Holographic geometry: [MERA](./tensor_networks/mera/), [Hyper-invariant](./tensor_networks/hyperinvariant/)
+- [Quantum Algorithms](./quantum_algorithms/)
+  - Example circuits (e.g., Deutsch–Jozsa) and their tensor network interpretation
+- [Research](./research/)
+  - Novel toy model computation/optimization and experiments
+- [References](./references/)
+  - Curated papers on tensor networks, holography, and related topics
+- [Frameworks](./frameworks/)
+  - Reusable ML/tensor-network utilities and internal tooling
+- [Questions, struggles, failures](./questions.md)
+  - Notes that capture open questions and dead ends (useful for future work)
+<!-- - Reproduction of interesting results from literature -->
 
 I can be reached for questions or comments at:
 
@@ -56,6 +63,12 @@ This captures all installed packages (including transitive dependencies) with ex
 The project uses Python 3.11 for compatibility with modern tensor network libraries. GPU support can be added later by installing appropriate packages for your hardware (CuPy, JAX, Apex, etc.).
 
 ## Overview
+This project studies tensor networks as computational models of quantum systems and as phenomenological realizations of holographic dualities. A central theme is viewing quantum circuits themselves as tensor networks, unifying algorithmic constructions with many-body methods and geometric interpretations.
+
+See:
+- Implementations and geometry: `tensor_networks/`
+- Algorithmic examples: `quantum_algorithms/`
+- Background literature: `references/`
 
 ## Experiments
 
