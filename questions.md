@@ -13,6 +13,8 @@ A running list of questions related to this program. Comments and Extensions gla
     - This paper [Rinaldi_quantum_simulation](./references/Rinaldi_Matrix_Model_Simulation.pdf) likewise attempts to address this question with quantum Monte Carlo, deep learning, and more. 
     - Another interesting but more complicated attempt in the framework of M-theory is the [MCSMC_lattice_gg](./references/MCSMC_lattice_gauge_gravity.pdf).
 
+3. In the literature beyond strings, can we combine variational methods from both quantum physics and ML to simulate other models of quantum gravity (spin foams, loop quantum gravity, etc.)?
+
 
 ## Computational Foundations
 
