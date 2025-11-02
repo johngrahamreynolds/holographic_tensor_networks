@@ -4,7 +4,7 @@
 
 This directory houses example implementations of foundational quantum algorithms. The unifying perspective of this repository is that quantum circuits are naturally represented as tensor networks: gates correspond to tensors, wires to contracted indices, and full circuits to tensor network diagrams. This lens connects algorithmic quantum computing to the broader study of efficient tensor contractions, renormalization ideas, and emergent geometry explored elsewhere in the repo.
 
-For background on tensor networks and their expressivity, see [Orús_intro](../references/Orus_TensorNetworksIntro.pdf) and related materials in `references/`.
+For background on tensor networks and their expressivity, see [Orús_intro](../../references/Orus_TensorNetworksIntro.pdf) and related materials in `references/`.
 
 ## Contents
 

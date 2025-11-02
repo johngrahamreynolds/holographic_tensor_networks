@@ -1,10 +1,10 @@
-# Frameworks
+# Utils
 
-This directory houses internal tooling and frameworks for reuse across different tensor network methods.
+This directory houses internal utilities and tooling for reuse across different tensor network methods.
 
 ## Purpose
 
-- Share utilities across `tensor_networks/`, `quantum_algorithms/`, and `geometric_deep_learning/`
+- Share utilities across `tensor_networks/`, `quantum_algorithms/`, and research modules
 - Avoid duplication of data structures, contractions, visualization helpers, and training loops
 
 ## Suggested Use
