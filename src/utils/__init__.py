@@ -1,4 +1,4 @@
-# Frameworks: Reusable ML and tensor network utilities
+# Utils: Reusable ML, quantum computing, and tensor network utilities
 # Author: John Graham-Reynolds
 # *************************************************************
 

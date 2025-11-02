@@ -5,19 +5,18 @@ This repo is home to my broad study of holographic tensor networks. Particularly
 
 The aim of this robust repo is to house all resources integral to the full scientific research process. Use the navigation below to explore implementations, algorithms, references, and tooling:
 
-- [Tensor Networks: Examples and Geometry](./tensor_networks/)
-  - Physical geometry: [MPS](./tensor_networks/mps/), [PEPS](./tensor_networks/peps/)
-  - Holographic geometry: [MERA](./tensor_networks/mera/), [Hyper-invariant](./tensor_networks/hyperinvariant/)
-- [Quantum Algorithms](./quantum_algorithms/)
+- [Tensor Networks: Examples and Geometry](./src/tensor_networks/)
+  - Physical geometry: [MPS](./src/tensor_networks/mps/), [PEPS](./src/tensor_networks/peps/)
+  - Holographic geometry: [MERA](./src/tensor_networks/mera/), [Hyper-invariant](./src/tensor_networks/hyperinvariant/)
+- [Quantum Algorithms](./src/quantum_algorithms/)
   - Example circuits (e.g., Deutsch–Jozsa) and their tensor network interpretation
-- [Research](./research/)
+- [Research](./src/research/)
   - Novel toy model computation/optimization and experiments
 - [References](./references/)
   - Curated papers on tensor networks, holography, and related topics
-- [Frameworks](./frameworks/)
-  - Reusable ML/tensor-network utilities and internal tooling
-- [Questions, struggles, failures](./questions.md)
-  - Notes that capture open questions and dead ends (useful for future work)
+- [Documentation](./docs/)
+  - [Questions, struggles, failures](./docs/questions.md) - Open questions and dead ends
+  - [Geometric Deep Learning](./docs/geometric_deep_learning/) - Connections to GDL
 <!-- - Reproduction of interesting results from literature -->
 
 I can be reached for questions or comments at:
@@ -26,7 +25,7 @@ I can be reached for questions or comments at:
 
 
 <div align="center">
-  <img src="./pics/Escher_angels_and_devils.jpg" alt="Escher A and D" width="600"/>
+  <img src="./assets/pics/Escher_angels_and_devils.jpg" alt="Escher A and D" width="600"/>
   <br>
   <em>Circle Limit IV (1960), M.C. Escher</em>
 </div>
@@ -66,9 +65,10 @@ The project uses Python 3.11 for compatibility with modern tensor network librar
 This project studies tensor networks as computational models of quantum systems and as phenomenological realizations of holographic dualities. A central theme is viewing quantum circuits themselves as tensor networks, unifying algorithmic constructions with many-body methods and geometric interpretations.
 
 See:
-- Implementations and geometry: `tensor_networks/`
-- Algorithmic examples: `quantum_algorithms/`
+- Implementations and geometry: `src/tensor_networks/`
+- Algorithmic examples: `src/quantum_algorithms/`
 - Background literature: `references/`
+- Documentation and notes: `docs/`
 
 ## Experiments
 
