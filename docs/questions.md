@@ -15,6 +15,11 @@ A running list of questions related to this program. Comments and Extensions gla
 
 3. In the literature beyond strings, can we combine variational methods from both quantum physics and ML to simulate other models of quantum gravity (spin foams, loop quantum gravity, etc.)?
 
+4. The *convolutions* of Convolutional Neural Networks (CNNs) use locality to optimally learn information about some dense tensor-like structure (images, videos, and other types of high-dimensional, pixelated data) with a minimal number free parameters where naive, fully connected linear layers are suboptimal, requiring a total number of parameters that is often many orders of magnitude larger. Furthermore, CNNs are more invariant (than other models) to symmetry transformations like rotations, shifts, resaclings, etc. that we recognize as valuable in physics. Can one apply these notion to physical (quantum) systems obeying locality in order to optimize computational simulations? 
+    - Is there some deeper connection here to locality in spacetime that can be uncovered?
+    - Recent work has proposed that bulk spacetime emerges from boundary quantum systems attempting to optimize their dynamics. See [Carrasco, et al.](../references/Carrasco_Gravitation_from_Computation.pdf)
+    - There is an obvious connection here to QCNNs
+
 
 ## Computational Foundations
 
