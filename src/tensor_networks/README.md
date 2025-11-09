@@ -26,7 +26,9 @@ Examples of tensor networks with manifest holographic geometry include:
 
 ## See Also
 
-- Algorithms as tensor networks: [`quantum_algorithms/`](../quantum_algorithms/)
-- Background literature: [`references/`](../../references/)
-- Utilities: [`utils/`](../utils/)
+- Canonical quantum algorithms as tensor networks: [`../quantum_algorithms/`](../quantum_algorithms/)
+- Quantum machine learning: [`../quantum_machine_learning/`](../quantum_machine_learning/)
+- Loop quantum gravity (spin networks, spin foams): [`../loop_quantum_gravity/`](../loop_quantum_gravity/)
+- Background literature: [`../../references/`](../../references/)
+- Utilities: [`../utils/`](../utils/)
 

@@ -24,8 +24,10 @@ Planned additions to broaden coverage and deepen tensor network connections:
 
 - Grover's search (amplitude amplification as structured contractions)
 - Quantum Fourier Transform (QFT) and phase estimation
+- Shor's algorithm (factoring via period finding)
 - Simon's problem and hidden subgroup structure
-- Variational algorithms (VQE/QAOA) and tensor network ansätze
+
+**Note:** Variational algorithms (VQE, QAOA) and quantum machine learning applications are housed in [`../quantum_machine_learning/`](../quantum_machine_learning/) rather than here, as they focus on optimization and learning tasks rather than computational complexity advantages.
 
 Contributions that extend examples or add tensor-network-centric visualizations are welcome.
 

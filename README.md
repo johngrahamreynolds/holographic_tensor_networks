@@ -1,15 +1,22 @@
-# Computational Holography: Tensor Networks, RG Flow, and Emergent Geometry
+# Tensor Networks: Computational Insights into Quantum Gravity, Information, and Many-Body Systems
 
-This repo is home to my broad study of holographic tensor networks. Particularly, I am interested in tensor networks as an effective, phenomenological realization of the gauge/gravity duality conjecture in theoretical physics. The most famous example of this conjecture is the AdS/CFT correspondence, which I target as an initial starting point for novel computational study. 
+This repository explores tensor networks and machine learning optimization techniques as a unified computational framework for studying the deep connections between quantum gravity, quantum information theory, quantum computing, and quantum many-body systems. While holographic tensor networks (particularly in the context of the AdS/CFT correspondence) represent a central focus, this work treats tensor networks more broadly as a powerful lens for understanding entanglement, emergent geometry, renormalization flow, and the computational structure of quantum systems across these interconnected domains.
 
+> **Note**: This repository is under active development as part of my Master's research at the University of Texas at Austin. Code, documentation, and research directions are continuously evolving. Contributions, questions, and collaborations are welcome.
 
-The aim of this robust repo is to house all resources integral to the full scientific research process. Use the navigation below to explore implementations, algorithms, references, and tooling:
+This repository houses implementations, algorithms, references, and documentation organized around the following areas:
 
 - [Tensor Networks: Examples and Geometry](./src/tensor_networks/)
   - Physical geometry: [MPS](./src/tensor_networks/mps/), [PEPS](./src/tensor_networks/peps/)
   - Holographic geometry: [MERA](./src/tensor_networks/mera/), [Hyper-invariant](./src/tensor_networks/hyperinvariant/)
 - [Quantum Algorithms](./src/quantum_algorithms/)
   - Example circuits (e.g., Deutsch–Jozsa) and their tensor network interpretation
+- [Quantum Machine Learning](./src/quantum_machine_learning/)
+  - Hybrid quantum-classical: [QCNNs, VQE, QAOA](./src/quantum_machine_learning/hybrid/)
+  - Purely quantum: [Quantum kernel methods, QSVMs](./src/quantum_machine_learning/purely_quantum/)
+- [Loop Quantum Gravity](./src/loop_quantum_gravity/)
+  - [Spin Networks](./src/loop_quantum_gravity/spin_networks/) and [Spin Foams](./src/loop_quantum_gravity/spin_foams/)
+  - Tensor network interpretations of LQG structures
 - [Research](./src/research/)
   - Novel toy model computation/optimization and experiments
 - [References](./references/)
@@ -24,13 +31,30 @@ I can be reached for questions or comments at:
 { johngrahamreynolds [at] utexas [dot] edu } OR { johngrahamreynolds [at] gmail [dot] com }
 
 
-<div align="center">
-  <img src="./assets/pics/Escher_angels_and_devils.jpg" alt="Escher A and D" width="600"/>
-  <br>
-  <em>Circle Limit IV (1960), M.C. Escher</em>
-</div>
+<p align="center">
+  <img src="./assets/pics/Escher_angels_and_devils.jpg" alt="Escher A and D" width="320">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/pics/MERA_lattice_circle.png" alt="MERA Lattice Circle" width="340"><br>
+  <sub>Circle Limit IV (1960), M.C. Escher</sub>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <sub>MERA Lattice on a Circle (2015), B. Czech, et al.</sub>
+</p>
 
 ## Abstract
+
+Tensor networks provide a powerful computational framework for studying quantum systems across multiple domains. This project explores how tensor network methods, combined with machine learning optimization techniques, can reveal novel insights into the connections between quantum gravity (holographic dualities, loop quantum gravity), quantum information theory (entanglement, error correction), quantum computing (circuit algorithms, variational methods), and quantum many-body systems (wavefunction representations, renormalization). By treating quantum circuits as tensor networks and leveraging variational optimization, we aim to develop computational tools that bridge these traditionally separate fields and uncover fundamental structural relationships.
+
+## Research Themes
+
+This project is organized around several interconnected themes:
+
+1. **Tensor Networks as a Unifying Computational Language**: Quantum circuits, many-body wavefunctions, and holographic geometries all admit natural tensor network representations, enabling unified computational approaches.
+
+2. **Machine Learning and Optimization**: Variational tensor network methods, quantum machine learning algorithms, and geometric deep learning connections provide powerful optimization frameworks for exploring quantum systems.
+
+3. **Emergent Geometry from Entanglement**: Understanding how geometric structure (from AdS space to spin network geometry) emerges from entanglement and information-theoretic principles.
+
+4. **Cross-Domain Connections**: Using computational methods to uncover and validate connections between quantum gravity, quantum information, quantum computing, and many-body physics.
 
 ## Setup
 
@@ -62,13 +86,24 @@ This captures all installed packages (including transitive dependencies) with ex
 The project uses Python 3.11 for compatibility with modern tensor network libraries. GPU support can be added later by installing appropriate packages for your hardware (CuPy, JAX, Apex, etc.).
 
 ## Overview
-This project studies tensor networks as computational models of quantum systems and as phenomenological realizations of holographic dualities. A central theme is viewing quantum circuits themselves as tensor networks, unifying algorithmic constructions with many-body methods and geometric interpretations.
 
-See:
-- Implementations and geometry: `src/tensor_networks/`
-- Algorithmic examples: `src/quantum_algorithms/`
-- Background literature: `references/`
-- Documentation and notes: `docs/`
+This project uses tensor networks and machine learning optimization techniques to explore fundamental connections across quantum physics. A central unifying theme is that tensor networks provide a computational language that bridges:
+
+- **Quantum Gravity**: Holographic tensor networks (MERA, hyper-invariant) as realizations of gauge/gravity duality (AdS/CFT), spin networks and spin foams in loop quantum gravity
+- **Quantum Information**: Entanglement structure, quantum error correction, and information-theoretic perspectives on geometry
+- **Quantum Computing**: Quantum circuits as tensor networks, connecting algorithmic constructions to many-body methods
+- **Quantum Many-Body Systems**: Efficient wavefunction representations, variational methods, and renormalization group flow
+
+By viewing quantum circuits, many-body states, and gravitational dualities through the same tensor network lens, we aim to uncover novel computational insights and optimization strategies that reveal deep structural connections between these seemingly disparate domains.
+
+### Repository Structure
+
+- **Tensor Networks**: Implementations and geometry (`src/tensor_networks/`)
+- **Quantum Algorithms**: Canonical algorithms with tensor network interpretations (`src/quantum_algorithms/`)
+- **Quantum Machine Learning**: Hybrid and purely quantum learning methods (`src/quantum_machine_learning/`)
+- **Loop Quantum Gravity**: Spin networks and spin foams (`src/loop_quantum_gravity/`)
+- **Background Literature**: Curated papers and references (`references/`)
+- **Documentation**: Research questions, notes, and explorations (`docs/`)
 
 ## Experiments
 
