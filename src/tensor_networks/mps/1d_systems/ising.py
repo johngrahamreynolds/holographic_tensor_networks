@@ -9,12 +9,6 @@ from scipy.sparse import csr_matrix
 from typing import Dict
 
 # Import shared tensor utilities from utils package
-import sys
-from pathlib import Path
-
-# Add project root to path for utils imports
-sys.path.insert(0, str(Path(__file__).parents[3]))
-
 from utils import (
     PAULI_X, PAULI_Z, 
     build_operator_at_site, build_two_site_operator,
