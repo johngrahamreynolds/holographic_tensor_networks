@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "holographic-tensor-networks"
+version = "0.1.0"
+description = "Research repository for tensor networks and quantum systems"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "scipy",
+    "torch",
+    "cirq",
+    "tensornetwork",
+    "tqdm",
+    "ipykernel",
+]
+
+[project.optional-dependencies]
+dev = [
+    "matplotlib",
+    "jupyter",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
