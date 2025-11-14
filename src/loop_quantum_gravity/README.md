@@ -50,5 +50,5 @@ The study of spin networks and spin foams through tensor network methods offers 
 Key papers on spin networks, spin foams, and their connection to tensor networks can be found in the `references/` directory. See also the broader literature on loop quantum gravity and its computational aspects.
 
 ### Textbooks
-- **Tomasiello (2016)**: A. Tomasiello, *Geometry of String Theory Compactifications*. Cambridge University Press, 2016. See [`../../references/non_pdf_references.md#string-theory`](../../references/non_pdf_references.md#string-theory) for full reference.
+- **Tomasiello (2022)**: A. Tomasiello, *Geometry of String Theory Compactifications*. Cambridge University Press, 2022. See [`../../references/non_pdf_references.md#string-theory`](../../references/non_pdf_references.md#string-theory) for full reference.
 
