@@ -36,7 +36,7 @@ All backends implement the `QuantumBackend` abstract base class, which provides 
 ### Basic Usage
 
 ```python
-from src.quantum_backends import get_backend
+from quantum_backends import get_backend
 import cirq
 
 # Get default backend (reads from environment/config)
@@ -53,8 +53,8 @@ print(result)
 ### Using Specific Backends
 
 ```python
-from src.quantum_backends import create_backend, BackendType
-from src.quantum_backends.config import BackendConfig
+from quantum_backends import create_backend, BackendType
+from quantum_backends.config import BackendConfig
 
 # Create a specific backend
 config = BackendConfig(backend_type=BackendType.SIMULATOR)
