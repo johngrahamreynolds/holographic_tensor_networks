@@ -1,4 +1,4 @@
-# Quantum Backends: AWS Braket backend (placeholder)
+# Quantum Backends: AWS Braket backend
 # Author: John Graham Reynolds
 # *************************************************************
 

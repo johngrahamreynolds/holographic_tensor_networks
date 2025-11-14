@@ -1,4 +1,4 @@
-# Quantum Backends: Azure Quantum backend (placeholder)
+# Quantum Backends: Azure Quantum backend
 # Author: John Graham Reynolds
 # *************************************************************
 
