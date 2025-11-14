@@ -4,7 +4,7 @@ This repository explores tensor networks and machine learning optimization techn
 
 > **Note**: This repository is under active development as part of my Master's research at the University of Texas at Austin. Code, documentation, and research directions are continuously evolving. Contributions, questions, and collaborations are welcome.
 
-**Research Outline**: See [Research_Outline.pdf](./Research_Outline.pdf) for a detailed overview of research directions, questions, and planned work.
+**Research Outline**: See [research_overview.pdf](./research_overview.pdf) for a detailed overview of research directions, questions, and planned work.
 
 This repository houses implementations, algorithms, references, and documentation organized around the following areas:
 
