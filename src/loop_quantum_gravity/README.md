@@ -4,7 +4,7 @@
 
 This directory contains implementations and studies related to spin networks and spin foams in loop quantum gravity (LQG). LQG is a background-independent approach to quantum gravity that quantizes geometry itself, rather than quantizing fundamentally extended objects (strings, branes, etc.) around a fixed background spacetime (and other fixed background fields). 
 
-It's worth noting that many string theorists still argue that string theory, particularly string *field* theory, proposes a truly background-independent theory of quantum gravity; see [Tomasiello (2016), page 8](../../references/non_pdf_references.md#string-theory). While string theory remains the most popular framework for understanding a UV-complete theory of gravity, LQG and its constituent spin networks/foams can likely be studied more directly in this tensor network optimization approach, whereas connections to strings and branes are more implicit through AdS/CFT and holographic geometry.
+It's worth noting that many string theorists still argue that string theory, particularly string *field* theory, proposes a truly background-independent theory of quantum gravity; see [Tomasiello (2022), page 8](../../references/non_pdf_references.md#string-theory). While string theory remains the most popular framework for understanding a UV-complete theory of gravity, LQG and its constituent spin networks/foams can likely be studied more directly in this tensor network optimization approach, whereas connections to strings and branes are more implicit through AdS/CFT and holographic geometry.
 
 ## Connection to Tensor Networks
 
