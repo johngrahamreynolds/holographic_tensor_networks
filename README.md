@@ -60,7 +60,7 @@ This project is organized around several interconnected themes:
 
 ### Environment Setup (using Conda)
 
-**Initial setup:**
+**Initial setup (one-time):**
 ```bash
 # Create the conda environment
 conda env create -f environment.yml
@@ -68,22 +68,43 @@ conda env create -f environment.yml
 # Activate the environment
 conda activate holo_tns
 
-# Install all requirements with exact versions
+# Install all requirements with exact pinned versions
 pip install -r requirements.txt
+
+# Install the package in editable mode (enables clean imports)
+pip install -e .
+```
+
+After running `pip install -e .`, you can import from `src/` modules without path hacks:
+```python
+# Clean imports (no sys.path manipulation needed)
+from utils import PAULI_X, build_operator_at_site
+from tensor_networks.mps import MPS
 ```
 
 **Development workflow:**
 
-As you add packages with `pip install`, update `requirements.txt` to maintain reproducibility:
+As you install new packages:
 
 ```bash
-# After installing new packages, export exact versions
+# 1. Install the new package
+pip install new_package_name
+
+# 2. If it's a main dependency, add it to pyproject.toml
+#    Edit the 'dependencies' list in pyproject.toml
+
+# 3. Update requirements.txt with exact versions
 pip freeze > requirements.txt
 ```
 
-This captures all installed packages (including transitive dependencies) with exact versions, ensuring full reproducibility for research purposes.
+This workflow maintains two complementary files:
+- **`pyproject.toml`**: Defines main dependencies (used for package definition)
+- **`requirements.txt`**: Captures all packages with exact versions (ensures reproducibility)
 
-The project uses Python 3.11 for compatibility with modern tensor network libraries. GPU support can be added later by installing appropriate packages for your hardware (CuPy, JAX, Apex, etc.).
+**Notes:**
+- The project uses Python 3.11 for compatibility with modern tensor network libraries
+- GPU support can be added by installing appropriate packages for your hardware (CuPy, JAX, Apex, etc.)
+- Run `pip install -e .` again if you recreate the conda environment
 
 ## Overview
 
