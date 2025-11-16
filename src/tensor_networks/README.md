@@ -4,7 +4,7 @@ This directory contains a variety of examples implementing various tensor networ
 
 ## Physical Geometry
 
-In a quantum many-body problem where particles are situated on a D-dimensional lattice *L*, the Hamiltonian *H* of interactions between neighboring states in *L* forms a *physical geometry* of the system. Given a short–range set of interactions in *H*––that is, only particles close to one another in *L* have interaction terms–– the physical geometry associated with the Hamiltonian is also D-dimensional and is essentially equivalent to the geometry of the lattice itself. An important class of tensor networks are those whose tensors are connected in lattice so as to recreate this physical geometry.
+In a quantum many-body problem where particles are situated on a D-dimensional lattice *L*, the Hamiltonian *H* of interactions between neighboring states in *L* forms a *physical geometry* of the system. Given a short–range set of interactions in *H*–that is, only particles close to one another in *L* have interaction terms– the physical geometry associated with the Hamiltonian is also D-dimensional and is essentially equivalent to the geometry of the lattice itself. An important class of tensor networks are those whose tensors are connected in lattice so as to recreate this physical geometry.
 
 Examples include:
 
