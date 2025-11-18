@@ -32,7 +32,7 @@ graphviz==0.21
 grpcio==1.76.0
 grpcio-status==1.71.2
 h5py==3.15.1
--e git+https://github.com/johngrahamreynolds/holographic_tensor_networks.git@629b96d87035941f033b6f8b110c7261ab394758#egg=holographic_tensor_networks
+-e git+https://github.com/johngrahamreynolds/holographic_tensor_networks.git@b4c7ea37a1086e3faa0a873375aaab06cdf133ad#egg=holographic_tensor_networks
 idna==3.11
 ipykernel==7.1.0
 ipython==9.6.0
