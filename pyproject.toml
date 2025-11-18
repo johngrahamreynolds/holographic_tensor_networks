@@ -16,6 +16,7 @@ dependencies = [
     "tensornetwork",
     "tqdm",
     "ipykernel",
+    "quimb"
 ]
 
 [project.optional-dependencies]
