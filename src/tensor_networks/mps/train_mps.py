@@ -47,14 +47,14 @@ def train_mps(
         num_excited=num_excited, 
         weight_by_degeneracy=weight_by_degeneracy, 
         base_energy_weight=base_energy_weight, 
-        excited_weight=excited_weight,
-        data=data)
+        excited_weight=excited_weight
+        )
 
     print(dataset)
 
     return mps
 
 if __name__ == "__main__":
-    mps = MPS(num_sites=5)
+    mps = MPS(num_sites=5, bond_dim=3, physical_dim=2)
     train_mps(mps, num_epochs=1000, learning_rate=0.01, batch_size=100, num_sites=5, J=1.0, h=0.5, num_excited=0, weight_by_degeneracy=True, base_energy_weight=1.0, excited_weight=0.1, dataset_name="ising_1d_open")
     print(f"Trained MPS: {mps}")
