@@ -415,7 +415,7 @@ def build_ising_1d_closed_dataset(num_sites: int = 5,
 
 
 # ============================================================================
-# TO BE REDACTED: Example usage for validation purposes only
+# TODO: remove. Example usage for validation purposes only
 # NOTE: This is a research based repository, but we could consider implementing unit tests for the codebase.
 # ============================================================================
 

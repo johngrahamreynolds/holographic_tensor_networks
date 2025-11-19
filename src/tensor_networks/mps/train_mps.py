@@ -69,6 +69,7 @@ def train_mps(
 
     return mps # return the trained MPS
 
+# TODO: remove
 if __name__ == "__main__":
     mps = MPS(num_sites=5, bond_dim=3, physical_dim=2)
     train_mps(mps, num_epochs=1000, learning_rate=0.01, batch_size=100, num_sites=5, J=1.0, h=0.5, num_excited=0, weight_by_degeneracy=True, base_energy_weight=1.0, excited_weight=0.1, dataset_name="ising_1d_open")

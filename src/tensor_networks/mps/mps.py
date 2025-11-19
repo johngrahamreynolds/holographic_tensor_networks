@@ -116,6 +116,7 @@ class MPS(nn.Module):
         pass
 
 
+# TODO: remove
 if __name__ == "__main__":
     # create a random state
     state = torch.randn(2, 2)
@@ -126,5 +127,5 @@ if __name__ == "__main__":
     print(f"MPS: {mps}")
 
     # forward pass with visualization
-    mps_state = mps.contract(state, visualize=False)
+    mps_state = mps.contract(state, visualize=True)
     print(f"MPS state: {mps_state}")
