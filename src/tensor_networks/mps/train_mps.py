@@ -52,7 +52,22 @@ def train_mps(
 
     print(dataset)
 
-    return mps
+    # grab the generated ground state
+    state = dataset['ground_state_torch']
+    print(f"Initial state: {state}")
+    contracted_state = mps.contract(state, visualize=True)
+    print(f"Contracted state: {contracted_state}")
+    print(f"Contracted state shape: {contracted_state.shape}")
+
+    # calculate the fidelity
+    fidelity = torch.abs(torch.dot(state, contracted_state))
+    print(f"Fidelity: {fidelity}")
+
+    # calculate the error
+    error = 1 - fidelity
+    print(f"Error: {error}")
+
+    return mps # return the trained MPS
 
 if __name__ == "__main__":
     mps = MPS(num_sites=5, bond_dim=3, physical_dim=2)
