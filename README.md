@@ -104,9 +104,25 @@ This workflow maintains two complementary files:
 - **`requirements.txt`**: Captures all packages with exact versions (ensures reproducibility)
 
 **Notes:**
-- The project uses Python 3.11 for compatibility with modern tensor network libraries
+- The project uses Python 3.11 for compatibility with modern machine learning and tensor network libraries
 - GPU support can be added by installing appropriate packages for your hardware (CuPy, JAX, Apex, etc.)
 - Run `pip install -e .` again if you recreate the conda environment
+
+### Jupyter Notebooks
+
+The project includes example notebooks (e.g., `src/tensor_networks/mps/ising_open_bc_example.ipynb`) that demonstrate tensor network training and experimentation.
+
+**For serverless environments (Google Colab, Databricks, etc.):**
+- Clone the repository and install the package in editable mode
+- See individual example notebooks for setup instructions
+- Use `serverless_development.ipynb` at the project root for active development with GPU/TPU access
+
+**For local Jupyter kernels:**
+- Examples work out of the box with the `holo_tns` conda environment
+- The package is already installed via `pip install -e .`
+- No additional setup required
+
+More example notebooks will be added gradually as the project develops.
 
 ## Overview
 
