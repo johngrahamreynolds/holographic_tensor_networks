@@ -358,7 +358,7 @@ def build_ising_1d_open_dataset(num_sites: int = 5,
         # States and energies
         'ground_state': ground_state,  # Full state vector (numpy)
         'ground_energy': ed_data['ground_energy'],
-        'ground_state_torch': torch.tensor(ground_state, dtype=torch.complex64),
+        'ground_state_torch': torch.tensor(ground_state, dtype=torch.complex128),
         'all_energies': ed_data['eigenvalues'][:num_states_actual],
         
         # State weights (accounts for degeneracy)
