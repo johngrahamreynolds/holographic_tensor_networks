@@ -1,0 +1,5 @@
+# Minimal requirements for Google Colab
+# This installs only the package itself, which will pull dependencies from pyproject.toml
+# Colab already has most packages preinstalled, so we avoid strict version conflicts
+-e git+https://github.com/johngrahamreynolds/holographic_tensor_networks.git@main#egg=holographic_tensor_networks
+

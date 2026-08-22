@@ -1,6 +1,6 @@
-# Ising Model in 1D
+# Ising Model in 1D: Data Generation and Computation
 # Author: John Graham Reynolds
-# This file generates the training data for the 1D Ising model.
+# *************************************************************
 
 import numpy as np
 import torch
@@ -116,12 +116,13 @@ def compute_ground_state_ising(
     # Check for degeneracies
     degeneracy_info = check_degeneracies(eigenvalues, tolerance=1e-6)
     
-    if degeneracy_info['has_degeneracies']:
-        print(f"\n⚠️  WARNING: Found {degeneracy_info['num_degenerate_levels']} degenerate energy level(s):")
-        for group_idx, group in enumerate(degeneracy_info['degenerate_groups']):
-            E_deg = eigenvalues[group[0]]
-            print(f"   Level {group_idx}: indices {group}, E = {E_deg:.8f} ({len(group)}-fold degenerate)")
-            print(f"      → Only the first eigenvector was returned by eigsh()")
+    # TODO: we dont need to print this warning
+    # if degeneracy_info['has_degeneracies']:
+    #     print(f"\n⚠️  WARNING: Found {degeneracy_info['num_degenerate_levels']} degenerate energy level(s):")
+    #     for group_idx, group in enumerate(degeneracy_info['degenerate_groups']):
+    #         E_deg = eigenvalues[group[0]]
+    #         print(f"   Level {group_idx}: indices {group}, E = {E_deg:.8f} ({len(group)}-fold degenerate)")
+    #         print(f"      → Only the first eigenvector was returned by eigsh()")
     
     result = {
         'ground_state': ground_state,
@@ -259,13 +260,15 @@ def check_degeneracies(eigenvalues: np.ndarray, tolerance: float = 1e-6) -> Dict
     }
 
 
-def build_ising_1d_open_dataset(num_sites: int = 8, 
+def build_ising_1d_open_dataset(num_sites: int = 5, 
                                J: float = 1.0, 
                                h: float = 0.5,
                                num_excited: int = 0,
                                weight_by_degeneracy: bool = True,
                                base_energy_weight: float = 1.0,
-                               excited_weight: float = 0.1) -> Dict:
+                               excited_weight: float = 0.1,
+                            #    pull_from_hf: bool = False
+                               ) -> Dict:
     """
     Construct complete dataset for 1D Ising system with open boundary conditions.
     
@@ -286,6 +289,16 @@ def build_ising_1d_open_dataset(num_sites: int = 8,
             - Multiple states with weights (if num_excited>0)
             - All observables computed for each state
     """
+
+    # if pull_from_hf:
+    #     # try to pull the prebuilt dataset from Hugging Face, if it fails, compute the dataset from scratch
+    #     try:
+    #         dataset = load_dataset(f"MarioBarbeque/ising_1d_open_n{num_sites}_s{num_excited}")
+    #         return dataset
+    #     except Exception as e:
+    #         print(f"Error pulling dataset from Hugging Face: {e}")
+    #         print(f"The dataset for the {num_sites}-site Ising chain with {num_excited} excited states may not yet be on the author's Hugging Face repository. Computing dataset from scratch...")
+    #         pass
     
     # Compute ground and excited states
     ed_data = compute_ground_state_ising(
@@ -345,7 +358,7 @@ def build_ising_1d_open_dataset(num_sites: int = 8,
         # States and energies
         'ground_state': ground_state,  # Full state vector (numpy)
         'ground_energy': ed_data['ground_energy'],
-        'ground_state_torch': torch.tensor(ground_state, dtype=torch.complex64),
+        'ground_state_torch': torch.tensor(ground_state, dtype=torch.complex128),
         'all_energies': ed_data['eigenvalues'][:num_states_actual],
         
         # State weights (accounts for degeneracy)
@@ -388,8 +401,21 @@ def build_ising_1d_open_dataset(num_sites: int = 8,
     return dataset
 
 
+def build_ising_1d_closed_dataset(num_sites: int = 5, 
+                               J: float = 1.0, 
+                               h: float = 0.5,
+                               num_excited: int = 0,
+                               weight_by_degeneracy: bool = True,
+                               base_energy_weight: float = 1.0,
+                               excited_weight: float = 0.1) -> Dict:
+    """
+    Construct complete dataset for 1D Ising system with closed boundary conditions.
+    """
+    pass
+
+
 # ============================================================================
-# TO BE REDACTED: Example usage for validation purposes only
+# TODO: remove. Example usage for validation purposes only
 # NOTE: This is a research based repository, but we could consider implementing unit tests for the codebase.
 # ============================================================================
 

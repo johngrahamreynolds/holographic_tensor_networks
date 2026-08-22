@@ -7,6 +7,9 @@ import numpy as np
 from scipy.sparse import kron
 from functools import reduce
 from typing import List, Union
+import matplotlib.pyplot as plt
+import quimb.tensor as qtn
+import tensornetwork as tn
 
 
 # ============================================================================
@@ -177,3 +180,108 @@ def compute_state_weights(eigenvalues: np.ndarray,
     weights = weights / np.sum(weights)
     
     return weights
+
+
+# ============================================================================
+# Tensor Network Visualization Utilities
+# ============================================================================
+
+def convert_tensornetwork_to_quimb(nodes: List[tn.Node]) -> qtn.TensorNetwork:
+    """
+    Convert TensorNetwork nodes to quimb TensorNetwork format.
+    
+    Args:
+        nodes: List of TensorNetwork nodes to convert.
+    Returns:
+        quimb TensorNetwork object.
+    """
+    # Create quimb TensorNetwork
+    qtn_network = qtn.TensorNetwork()
+    
+    # Map to track edge connections (edge -> quimb index name)
+    edge_to_ind = {}
+    ind_counter = 0
+    qtn_tensors = []
+    
+    # First pass: create all quimb tensors
+    for i, node in enumerate(nodes):
+        # Get tensor as numpy array
+        tensor = node.tensor
+        if hasattr(tensor, 'detach'):  # PyTorch tensor
+            tensor_np = tensor.detach().cpu().numpy()
+        elif hasattr(tensor, 'numpy'):  # TensorFlow tensor
+            tensor_np = tensor.numpy()
+        else:
+            tensor_np = np.asarray(tensor)
+        
+        # Get tensor shape to determine number of dimensions
+        num_dims = len(tensor_np.shape)
+        
+        # Iterate through edges by dimension index and create unique index names for each edge
+        inds = []
+        
+        for dim_idx in range(num_dims):
+            # Get edge for this dimension
+            edge = node[dim_idx]
+            
+            if edge.is_dangling():
+                # Create unique index name for dangling edge
+                ind_name = f"i{ind_counter}"
+                ind_counter += 1
+                inds.append(ind_name)
+            else:
+                # For connected edges, use the same index name
+                if edge not in edge_to_ind:
+                    ind_name = f"b{ind_counter}"
+                    ind_counter += 1
+                    edge_to_ind[edge] = ind_name
+                else:
+                    ind_name = edge_to_ind[edge]
+                inds.append(ind_name)
+        
+        # Create quimb Tensor with tags and unique index names for each edge
+        qtn_tensor = qtn.Tensor(
+            data=tensor_np,
+            inds=inds,
+            tags=[f"site_{i}"]
+        )
+        qtn_tensors.append(qtn_tensor)
+    
+    # Add all tensors to the network and connect them iteratively using the overloaded |= operator
+    for qtn_tensor in qtn_tensors:
+        qtn_network |= qtn_tensor
+    
+    return qtn_network
+
+
+def visualize_tensor_network(nodes: List[tn.Node], title: str = "Tensor Network", 
+                             figsize: tuple = (12, 8), use_quimb: bool = True):
+    """
+    Visualize a tensor network graph using quimb's draw method.
+    
+    Args:
+        nodes: List of tensor network nodes to visualize.
+        title: Title for the plot.
+        figsize: Figure size (width, height).
+        use_quimb: If True, use quimb's draw method (default: True).
+    """
+    if use_quimb:
+        qtn_network = convert_tensornetwork_to_quimb(nodes)
+        
+        if qtn_network is None:
+            raise ValueError("Failed to convert tensor network to quimb format")
+        
+        # Use quimb's draw method - it will display the visualization
+        qtn_network.draw(
+            show_inds=True,
+            show_tags=True,
+            node_color='lightblue',
+            edge_color='gray',
+            figsize=figsize,
+            title=title
+        )
+
+    else:
+        raise NotImplementedError(
+            "Only quimb visualization is currently supported. Set use_quimb=True."
+        )
